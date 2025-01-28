@@ -41,6 +41,7 @@ kotlin {
             implementation(project(":worker"))
 
             implementation(npm("moment", "2.30.1"))
+            implementation(npm("firebase", "11.2.0"))
         }
         jvmMain.dependencies {
             compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime

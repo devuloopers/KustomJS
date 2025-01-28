@@ -15,10 +15,11 @@ val customJsDir = rootProject.projectDir.resolve("site/src/jsMain/resources/cust
 customJsDir.listFiles { file -> file.extension == "js" }?.forEach { jsFile ->
     implementation(npm(jsFile.name, "file:$customJsDir"))
 }
+implementation(npm("firebase", "11.2.0"))
 ```
 
 ### 3. Install Firebase
-Install the latest Firebase package at the project root:
+Install the latest Firebase package at the project root also:
 ```bash
 npm install firebase@latest
 ```
